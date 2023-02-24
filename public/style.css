@@ -1,6 +1,56 @@
 body{
     background-color: #D5F9DE;
+}
+.title-div{
     text-align: center;
-    margin: 7% 15%;
+}
+
+.title{
+    padding-top:4% ;
+}
+
+.sub-title{
+    padding-top: 2%;
+}
+
+
+.title-font{
+    font-family: 'Cinzel', serif;
+}
+.input-form{
+    margin-top: 8%;
+    margin-left: 20%;
+    text-align: center;
+}
+.input-div{
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+
+.fit-content{
+    width: fit-content;
+}
+
+.fix-width{
+    width:200px;
+}
+
+.push-right{
+    margin-right:0% ;
+}
+
+.normargin{
+    margin-right: 0%;
+    padding-right: 0%;
+}
+
+.button-form{
+    padding-left: 0%;
+    margin-top: 8%;
+    margin-left: 0%;
+}
+.button{
+    margin-top: 7% ;
 }
 

@@ -27,6 +27,17 @@ app.post("/",(req,res)=>{
     let nol = req.body.letter;
     let nos = req.body.symbol;
     let non = req.body.number;
+
+    if(nol < 0){
+        nol = 0;
+    }
+    if(nos<0){
+        nos = 0;
+    }
+    if(non<0){
+        non = 0;
+    }
+
     password =[]
     for (let index = 0; index < nol; index++) {
         var i = Math.floor(Math.random()*52);
@@ -40,7 +51,22 @@ app.post("/",(req,res)=>{
         var temp = Math.floor(Math.random()*8);
         password.push(numbers[temp]);
     }
-    res.send(password);
-
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) { 
+       
+            // Generate random number 
+            var j = Math.floor(Math.random() * (i + 1));
+                       
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+           
+        return array;
+    }
+    shuffledArray = shuffleArray(password);
+    fp = shuffledArray.toString();
+    var newfp = fp.replaceAll(",","");
+    res.send("Your customised password is : "+ newfp);
 })
 
